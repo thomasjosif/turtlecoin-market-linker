@@ -4,7 +4,7 @@ import random
 
 client = discord.Client() 
 
-
+# list of words which triggers it
 bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "trde", "trae", "tradesat", 
 				"wen lambo", "wen moon", "trade-", "when moon", "when lambo", "price", "fiat", "pr1ce", "usd", "euro", "inr", "binance", "altcoin", "sats", 
 				"to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sats down", "exhcnage", "pump and dump", "dump", 
@@ -26,10 +26,24 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"buy bitcion", "buy btiocin", "buy bitocin", "coin offering", "inital coin offering", "crypto investing", "crypto invensting", "crypto investments",
 				"investment", "investment", "investing", "invensting", "dividends", "dividens", "profit, dividends and gains", "profit dividens and gains"]
 
-wordlist = ["Go the server linked in #market-talk, not in this server", 
+# list of responses
+wordlist = ["Go the server linked in #market-talk, none of that in this server", 
 			"Rock's gonna git you boi, better move to the server linked in #market-talk NOW", 
 			"u. move to server linked in #market-talk now. otherwise u ban.",
 			":rotating_light: MARKET TALK DETECTED :rotating_light: :rotating_light: Move to the server linked in #market-talk to save yourself :rotating_light:"]
+
+#help reply
+help = "Available commands-> `^git` and `^todo`"
+
+# github repo
+git = "https://github.com/Sajo811/turtlecoin-market-linker"
+
+# todo list
+todo = "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
+
+# supreme power
+super = "lol"
+
 
 @client.event 
 async def on_ready():
@@ -37,10 +51,31 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+	# check if bot is author in which case doesnt do anything
 	if message.author.bot:
 		return
+
+	# check if message incl. banned words. if so, spit a response
 	if any(word.lower() in message.content.lower() for word in bannedWords):
 		await client.send_message(message.channel, message.author.mention + " " + random.choice(wordlist))
 
+	# command to see if message starts with something and then responds if true
+	if message.content.lower() == "^help":
+		await client.send_message(message.channel, message.author.mention + " " + help)
+		return
+
+	if message.content.lower() == "^git":
+		await client.send_message(message.channel, message.author.mention + " " + git)
+		return
+
+	if message.content.lower() == "^todo":
+		await client.send_message(message.channel, message.author.mention + " " + todo)
+		return
+
+	#commmand which can only be run by person whose user id matches this one here	
+	if message.content.lower() == "^super" and message.author.id == "235707623985512451":
+		await client.send_message(message.channel, message.author.mention + " " + super)
+	else:
+		return
 
 client.run("token")
