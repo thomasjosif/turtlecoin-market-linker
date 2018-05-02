@@ -19,7 +19,7 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"localturtlecoin", "localmonero", "local bitcoin", "local bitcoins", "localbitcoin", "stocks.exchange", "wen lamb0", "when lamb0", "wen l@mbo", 
 				"when l@mbo", "wen l@mb0", "when l@mb0", "indacion", "indaocin", "satoshi", "ogre", "tr@de", "tr2de", "elliot wave", "when buy in", "mt. gox",
 				" mt. gox", "mtgox", "mt gox", "pesos", "pesps", "trtl sell", "tlt sell", "turtlecoin sell", "trtl buy", "trlt buy", "turtlecoin buy",
-				"1sat", "1 sat"]
+				"1sat", "1 sat", "buy turtle", "sell turtle", "crypto exchange", "cryptocurrency exchange", "crypto currency exchange"]
 
 wordlist = ["Go the server linked in #market-talk, not in this server", 
 			"Rock's gonna git you boi, better move to the server linked in #market-talk NOW", 
