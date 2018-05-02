@@ -4,10 +4,11 @@ import random
 
 client = discord.Client() 
 
+
 bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "trde", "trae", "tradesat", 
 				"wen lambo", "wen moon", "trade-", "when moon", "when lambo", "price", "fiat", "pr1ce", "usd", "euro", "inr", "binance", "altcoin", "sats", 
-				"ts", "to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sat down", "sats down", "exhcnage", "pump and dump", "dump", 
-				"eur", "gbp", "ruble", "rub", "but turtlecoin", "but trtl", "mcap", "market cap", "moons", "hitbtc", "trtl be worth", "trtl worth", 
+				"to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sats down", "exhcnage", "pump and dump", "dump", 
+				"eur", "gbp", "ruble", "but turtlecoin", "but trtl", "moons", "hitbtc", "trtl be worth", "trtl worth", 
 				"airdrop", "shitcoin", "shitcion", "shitconi", "gewi", "gwei", "mine and sell", "down trend", "resistance line", "bearish", "bullish",
 				"to da moon", "pump and dump", "pump & dump", "pumped and dumped", "pumped & dumped", "pump n dump", "pumped n dumped" , "cmc", "coin market cap",
 				"ico", "ipo", "stop loss", "mkid", "tether", "trading", "trend line", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
@@ -20,7 +21,10 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"when l@mbo", "wen l@mb0", "when l@mb0", "indacion", "indaocin", "satoshi", "ogre", "tr@de", "tr2de", "elliot wave", "when buy in", "mt. gox",
 				" mt. gox", "mtgox", "mt gox", "pesos", "pesps", "trtl sell", "tlt sell", "turtlecoin sell", "trtl buy", "trlt buy", "turtlecoin buy",
 				"1sat", "1 sat", "buy turtle", "sell turtle", "crypto exchange", "cryptocurrency exchange", "crypto currency exchange", "sellin", "buyin",
-				"selin", "pumpin", "dumpin", "sellwall", "buywall", "selwall"]
+				"selin", "pumpin", "dumpin", "sellwall", "buywall", "selwall", " ts", "s@t", "0 sat", "0sat", "0stas", "stas", "st@s", "btc volume", 
+				"btc volue", "btc volube", "wen buy in", "wen sell out", "wen but in", "when but in", "pr!ce", "binnance", "buy btc", "buy bct", "buy bticoin", 
+				"buy bitcion", "buy btiocin", "buy bitocin", "coin offering", "inital coin offering", "crypto investing", "crypto invensting", "crypto investments",
+				"investment", "investment", "investing", "invensting", "dividends", "dividens", "profit, dividends and gains", "profit dividens and gains"]
 
 wordlist = ["Go the server linked in #market-talk, not in this server", 
 			"Rock's gonna git you boi, better move to the server linked in #market-talk NOW", 
