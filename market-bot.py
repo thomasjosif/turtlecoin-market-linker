@@ -8,7 +8,7 @@ client = discord.Client()
 bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "trde", "trae", "tradesat", 
 				"wen lambo", "wen moon", "trade-", "when moon", "when lambo", "price", "fiat", "pr1ce", "usd", "euro", "inr", "binance", "altcoin", "sats", 
 				"to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sats down", "exhcnage", "pump and dump", "dump", 
-				"eur", "gbp", "ruble", "but turtlecoin", "but trtl", "moons", "hitbtc", "trtl be worth", "trtl worth", "exchnages",
+				"eur", "gbp", "ruble", "but turtlecoin", "but trtl", "moons", "hitbtc", "trtl be worth", "trtl worth", "exhcnag,e"
 				"airdrop", "shitcoin", "shitcion", "shitconi", "gewi", "gwei", "mine and sell", "down trend", "resistance line", "bearish", "bullish",
 				"to da moon", "pump and dump", "pump & dump", "pumped and dumped", "pumped & dumped", "pump n dump", "pumped n dumped" , "cmc", "coin market cap",
 				"ico", "ipo", "stop loss", "mkid", "tether", "trading", "trend line", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
@@ -76,11 +76,11 @@ async def on_message(message):
 		return
 
 	#commmand which can only be run by person whose user id matches this one here
-	if message.content.lower() == "^super" and message.author.id == "235707623985512451":
+	if message.content.lower() == "^super" 
+	and message.author.id == "235707623985512451":
 		await client.send_message(message.channel, message.author.mention + " " + super)
 	else:
 		await client.send_message(message.channel, message.author.mention + " " + perms)
 		return
- 
 
 client.run("token")
