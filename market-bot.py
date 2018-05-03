@@ -44,6 +44,9 @@ todo = "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
 # supreme power
 super = "lol"
 
+# no permission to run
+perms = "Sorry, you don't have the priveledges to run this command. It's like you're SuperMan, and this command is green kryptonite"
+
 
 @client.event 
 async def on_ready():
@@ -59,7 +62,7 @@ async def on_message(message):
 	if any(word.lower() in message.content.lower() for word in bannedWords):
 		await client.send_message(message.channel, message.author.mention + " " + random.choice(wordlist))
 
-	# command to see if message starts with something and then responds if true
+	# command to see if message *is* something and then responds if true
 	if message.content.lower() == "^help":
 		await client.send_message(message.channel, message.author.mention + " " + help)
 		return
@@ -76,6 +79,7 @@ async def on_message(message):
 	if message.content.lower() == "^super" and message.author.id == "235707623985512451":
 		await client.send_message(message.channel, message.author.mention + " " + super)
 	else:
+		await client.send_message(message.channel, message.author.mention + " " + perms)
 		return
 
 client.run("token")
