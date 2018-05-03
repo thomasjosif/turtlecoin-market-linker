@@ -1,6 +1,6 @@
 # turtlecoin-market-linker
 
-A simple bot to look for any market talk-related keywords, after which is prints out a pre-set message.
+A simple bot to look for any market talk-related keywords, after which is chooses randomly from and prints a pre-set message.
 
 ## Usage
 
