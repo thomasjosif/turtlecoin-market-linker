@@ -8,7 +8,7 @@ client = discord.Client()
 bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "trde", "trae", "tradesat", 
 				"wen lambo", "wen moon", "trade-", "when moon", "when lambo", "price", "fiat", "pr1ce", "usd", "euro", "inr", "binance", "altcoin", "sats", 
 				"to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sats down", "exhcnage", "pump and dump", "dump", 
-				"eur", "gbp", "ruble", "but turtlecoin", "but trtl", "moons", "hitbtc", "trtl be worth", "trtl worth", 
+				"eur", "gbp", "ruble", "but turtlecoin", "but trtl", "moons", "hitbtc", "trtl be worth", "trtl worth", "exchnages",
 				"airdrop", "shitcoin", "shitcion", "shitconi", "gewi", "gwei", "mine and sell", "down trend", "resistance line", "bearish", "bullish",
 				"to da moon", "pump and dump", "pump & dump", "pumped and dumped", "pumped & dumped", "pump n dump", "pumped n dumped" , "cmc", "coin market cap",
 				"ico", "ipo", "stop loss", "mkid", "tether", "trading", "trend line", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
@@ -33,7 +33,7 @@ wordlist = ["Go the server linked in #market-talk, none of that in this server",
 			":rotating_light: MARKET TALK DETECTED :rotating_light: :rotating_light: Move to the server linked in #market-talk to save yourself :rotating_light:"]
 
 #help reply
-help = "Available commands-> `^git` and `^todo`"
+help = "Available commands - `^git` and `^todo`"
 
 # github repo
 git = "https://github.com/Sajo811/turtlecoin-market-linker"
@@ -45,7 +45,7 @@ todo = "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
 super = "lol"
 
 # no permission to run
-perms = "Sorry, you don't have the priveledges to run this command. It's like you're SuperMan, and this command is green kryptonite"
+perms = "Sorry, you don't have the priveleges to run this command. It's like you're SuperMan, and this command is green kryptonite"
 
 
 @client.event 
