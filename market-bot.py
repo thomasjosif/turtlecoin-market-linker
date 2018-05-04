@@ -45,7 +45,7 @@ todo = "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
 super = "lol"
 
 # no permission to run
-perms = "Sorry, you don't have the priveleges to run this command. It's like you're SuperMan, and this command is green kryptonite"
+perms = "Sorry, you don't have the privileges to run this command. It's like you're SuperMan, and this command is green kryptonite"
 
 
 @client.event 
@@ -76,12 +76,11 @@ async def on_message(message):
 		return
 
 	#commmand which can only be run by person whose user id matches this one here
-	if message.content.lower() == "^super" 
+	if message.content.lower() == "^super":
 		if message.author.id != "235707623985512451":
 			await client.send_message(message.channel, message.author.mention + " " + perms)
 		else:
 			await client.send_message(message.channel, message.author.mention + " " + super)
 		return
-
 
 client.run("token")
