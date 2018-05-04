@@ -89,7 +89,7 @@ async def on_message(message):
 		return	
 	
 	# command to manually warn person
-	if message.content.lower() == "^warn":	
+	if message.content.lower() == "^warn <@%s>":	
 		if message.author.id == "235707623985512451":
 			# get userid of person
 			myid = message.mentions
