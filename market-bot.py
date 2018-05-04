@@ -27,10 +27,10 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"investment", "investment", "investing", "invensting", "dividends", "dividens", "profit, dividends and gains", "profit dividens and gains"]
 
 # list of responses
-wordlist = ["Go the server linked in #market-talk, none of that in this server", 
-			"Rock's gonna git you boi, better move to the server linked in #market-talk NOW", 
-			"u. move to server linked in #market-talk now. otherwise u ban.",
-			":rotating_light: MARKET TALK DETECTED :rotating_light: :rotating_light: Move to the server linked in #market-talk to save yourself :rotating_light:"]
+wordlist = ["Heyo, please move to the server linked in #market-talk, we don't like it here.", 
+			"If you could move to the server linked in #market-talk, that'd be great! We don't enjoy that here.", 
+			"Please move this discussion to the server linked in #market-talk, we like to keep this server focused on support and development. Thank you! :t_smile:",
+			":rotating_light: MARKET TALK DETECTED :rotating_light: :rotating_light: Move to the server linked in #market-talk, we don't like that here. :rotating_light:"]
 
 #help reply
 help = "Available commands - `^git` and `^todo`"
@@ -42,10 +42,13 @@ git = "https://github.com/Sajo811/turtlecoin-market-linker"
 todo = "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
 
 # supreme power
-super = "lol"
+super = "WHEN WEB WALLET"
 
 # no permission to run
-perms = "Sorry, you don't have the privileges to run this command. It's like you're SuperMan, and this command is green kryptonite"
+perms = "Sorry, you don't have the privileges to run this command. It's like you're SuperMan, and this command is green kryptonite."
+
+# manual warn's response
+manres = "Hey, we don't like market-related talk in here. Join the server linked in #market-talk to discuss about it."
  
 
 @client.event 
@@ -96,7 +99,7 @@ async def on_message(message):
 		if message.author.id == "235707623985512451":
 			# get userid of person
 			user = message.mentions[0]
-			await client.send_message(message.channel, user.mention + " " + random.choice(wordlist))
+			await client.send_message(message.channel, user.mention + " " + manres)
 	else:
 		return
 
