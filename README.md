@@ -4,9 +4,11 @@ A simple bot to look for any market talk-related keywords, after which it choose
 
 ## Usage
 
-`py market-bot.py`
+``` py
+py market-bot.py
+```
 
-## Adding on Discord
+## Connecting it to Discord
 
 * Go [here](https://discordapp.com/developers/applications/me#top) to make a bot.
 * Give your bot a name, and then click `Create App`.
