@@ -54,7 +54,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-	
+
+	# convert it to lower
+	low = message.content.lower()
+
 	#send only in general
 	if message.channel.id != "440496273762549762":
 		return
@@ -89,11 +92,11 @@ async def on_message(message):
 		return	
 	
 	# command to manually warn person
-	if message.content.lower() == "^warn <@%s>":	
+	if message.content.lower().startswith("^warn"):	
 		if message.author.id == "235707623985512451":
 			# get userid of person
-			myid = message.mentions
-			await client.send_message(message.channel, "<@%s> is the best" % (myid))
+			user = message.mentions[0]
+			await client.send_message(message.channel, user.mention + " " + random.choice(wordlist))
 	else:
 		return
 
