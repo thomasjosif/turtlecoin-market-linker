@@ -76,10 +76,12 @@ async def on_message(message):
 		return
 
 	#commmand which can only be run by person whose user id matches this one here
-	if message.content.lower() == "^super" and message.author.id != "235707623985512451":
-		await client.send_message(message.channel, message.author.mention + " " + perms)
-	else:
-		await client.send_message(message.channel, message.author.mention + " " + super)
+	if message.content.lower() == "^super" 
+		if message.author.id != "235707623985512451":
+			await client.send_message(message.channel, message.author.mention + " " + perms)
+		else:
+			await client.send_message(message.channel, message.author.mention + " " + super)
 		return
+
 
 client.run("token")
