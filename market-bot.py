@@ -46,7 +46,7 @@ super = "lol"
 
 # no permission to run
 perms = "Sorry, you don't have the privileges to run this command. It's like you're SuperMan, and this command is green kryptonite"
-
+ 
 
 @client.event 
 async def on_ready():
@@ -54,6 +54,11 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+	
+	#send only in general
+	if message.channel.id != "440496273762549762":
+		return
+
 	# check if bot is author in which case doesnt do anything
 	if message.author.bot:
 		return
@@ -81,14 +86,15 @@ async def on_message(message):
 			await client.send_message(message.channel, message.author.mention + " " + perms)
 		else:
 			await client.send_message(message.channel, message.author.mention + " " + super)
-		return
-			
+		return	
+	
 	# command to manually warn person
-	if message.content.lower() == "^warn ":	
+	if message.content.lower() == "^warn":	
 		if message.author.id == "235707623985512451":
-			mtn = mentioned_in
-			await client.send_message(message.channel, message.mtn + "@ " + random.choice(wordlist))
-		else:
-			return
+			# get userid of person
+			myid = message.mentions
+			await client.send_message(message.channel, "<@%s> is the best" % (myid))
+	else:
+		return
 
 client.run("token")
