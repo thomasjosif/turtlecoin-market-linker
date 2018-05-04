@@ -82,5 +82,13 @@ async def on_message(message):
 		else:
 			await client.send_message(message.channel, message.author.mention + " " + super)
 		return
+			
+	# command to manually warn person
+	if message.content.lower() == "^warn ":	
+		if message.author.id == "235707623985512451":
+			mtn = mentioned_in
+			await client.send_message(message.channel, message.mtn + "@ " + random.choice(wordlist))
+		else:
+			return
 
 client.run("token")
