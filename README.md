@@ -44,13 +44,14 @@ I use it personally and recommend as on signing up you get free "Dynos"(credits)
 * Once done, make an account in Heroku(screw the get started guide) and make a new application
 * Go to `Deploy` and scroll down
   * Download [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-  * If you don't have Git installed yet, then do so.
-  * If you do then cancel the installation of Git and run `Git CLI` when the CLI installs
+  * If you don't have Git installed yet, then do so(through the Heroku installer.)
+    * For the rest of the tutorial, enter all commands through the terminal/command prompts
+    * If you do then cancel the installation of Git and run `Git CLI` when the CLI installs
   * Login to your Heroku account using `heroku login`
   * Clone and cd to your repository using the commands given
   * Make any changes you want to locally, then run the commands given to push them to Heroku and deploy them
 * If it deploys successfully, then it should-
-  * work in your server without having to run the sscript locally, and
+  * work in your server without having to run the script locally, and
   * show the message you defined to print on startup in the logs section of Heroku (`More` -> `View Logs`)
 
 ## Thanks
