@@ -25,7 +25,7 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"btc volue", "btc volube", "wen buy in", "wen sell out", "wen but in", "when but in", "pr!ce", "binnance", "buy btc", "buy bct", "buy bticoin", 
 				"buy bitcion", "buy btiocin", "buy bitocin", "coin offering", "inital coin offering", "crypto investing", "crypto invensting", "crypto investments",
 				"investment", "investment", "investing", "invensting", "dividends", "dividens", "profit, dividends and gains", "profit dividens and gains",
-				"mark3t", "xchange", "m@rket", "m@rk3t"]
+				"mark3t", "xchange", "m@rket", "m@rk3t", "initial coin offering", "exchnage", "mkt", "xchnage", "bitfenix"]
 
 # list of responses
 wordlist = ["Heyo, please move to the server linked in #market-talk, we don't like it here.", 
