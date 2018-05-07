@@ -25,13 +25,13 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"btc volue", "btc volube", "wen buy in", "wen sell out", "wen but in", "when but in", "pr!ce", "binnance", "buy btc", "buy bct", "buy bticoin", 
 				"buy bitcion", "buy btiocin", "buy bitocin", "coin offering", "inital coin offering", "crypto investing", "crypto invensting", "crypto investments",
 				"investment", "investment", "investing", "invensting", "dividends", "dividens", "profit, dividends and gains", "profit dividens and gains",
-				"mark3t", "xchange", "m@rket", "m@rk3t", "initial coin offering", "exchnage", "mkt", "xchnage", "bitfenix"]
+				"mark3t", "xchange", "m@rket", "m@rk3t", "initial coin offering", "exchnage", "mkt", "xchnage", "bitfenix", "ccex"]
 
 # list of responses
 wordlist = ["Heyo, please move to the server linked in #market-talk, we don't like it here.", 
 			"If you could move to the server linked in #market-talk, that'd be great! We don't enjoy that here.", 
 			"Please move this discussion to the server linked in #market-talk, we like to keep this server focused on support and development. Thank you! :t_smile:",
-			":rotating_light: MARKET TALK DETECTED :rotating_light: :rotating_light: Move to the server linked in #market-talk, we don't like that here. :rotating_light:"]
+			":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in #market-talk, we don't like that here. :rotating_light:"]
 
 #help reply
 help = "Available commands - `^git` and `^todo`"
@@ -66,8 +66,8 @@ async def on_message(message):
 	if message.channel.id != "440496273762549762":
 		return
 
-	# check if bot is author in which case doesnt do anything
-	if message.author.bot:
+	# check if the author is the **logged in** bot, in which case doesnt do anything
+	if(message.author.id == client.user.id):
 		return
 
 	# check if message incl. banned words. if so, spit a response
