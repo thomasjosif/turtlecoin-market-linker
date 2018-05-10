@@ -52,28 +52,10 @@ perms = "Sorry, you don't have the privileges to run this command. It's like you
 # manual warn's response
 manres = "Hey, we don't like market-related talk in here. Join the server linked in #market-talk to discuss about it."
 
-#anti spam vals
-lastMessageTimes = []
-maxResponses = 5
-timeFrameWindow = 10 
 
 @client.event 
 async def on_ready():
 	print("With me around, ain't gonna be no market talk!") 
-
-def shouldPrint():
-		currentTime = time.time()
-		if False:
-			return
-
-def lastMessageTimes():
-		# remove any messages that haven't occured in the last timeFrameWindow seconds
-	lastMessageTimes = [x for x in lastMessageTimes if not currentTime - x > timeFrameWindow]
-
-		# check if we've had over maxResponses in the last timeFrameWindows
-	if len(lastMessageTime) > maxResponses:
-		return False
-	return True
 
 @client.event
 async def on_message(message):
@@ -88,12 +70,6 @@ async def on_message(message):
 	# check if the author is the **logged in** bot, in which case doesnt do anything
 	if(message.author.id == client.user.id):
 		return
-
-	# check and say no spam if spam	
-	if shouldPrint():
-		#insert the current msg timestamp
-		lastMessageTimes.append(time.time())
-		print("sry no spam")
 
 	# check if message incl. banned words. if so, spit a response
 	if any(word.lower() in message.content.lower() for word in bannedWords):
@@ -128,5 +104,5 @@ async def on_message(message):
 			await client.send_message(message.channel, user.mention + " " + manres)
 	else:
 		return
-		
+
 client.run("token")
