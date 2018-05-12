@@ -6,13 +6,13 @@ import time
 client = discord.Client() 
 
 # list of words which triggers it
-bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "trde", "trae", "tradesat", 
+bannedWords = ["trade", "exchanges", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "trde", "trae", "tradesat", 
 				"wen lambo", "wen moon", "trade-", "when moon", "when lambo", "fiat", "pr1ce", "usd", "euro", "inr", "binance", "altcoin", "sats", 
 				"to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sats down", "exhcnage", "pump and dump", "dump", 
 				"eur", "gbp", "ruble", "but turtlecoin", "but trtl", "moons", "hitbtc", "trtl be worth", "trtl worth", "exhcnag,e"
 				"airdrop", "shitcoin", "shitcion", "shitconi", "gewi", "gwei", "mine and sell", "down trend", "resistance line", "bearish", "bullish",
 				"to da moon", "pump and dump", "pump & dump", "pumped and dumped", "pumped & dumped", "pump n dump", "pumped n dumped" , "cmc", "coin market cap",
-				"ico", "ipo ", "stop loss", "mkid", "tether", "trading", "trend line", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
+				"ico ", "ipo ", "stop loss", "mkid", "tether", "trading", "trend line", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
 				"wtb", "wts", "Bitfinex", "Kraken", "Coinbase", "coinone", "Bitstamp", "Bithumb", "Bittrex", "Quoine", "Gemini", "bitFlyer", "BTC-e", "Poloniex", 
 				"exx", "livecoin", "exmo", "korbit", "liqui", "cex.io", "tidex", "vaultoro", "itbit", "cryptopia", "yobit", "lakebtc", "kucoin", "btc-alpha", 
 				"quadrigacx", "localbitcoins", "coinfloor", "bitx", "coinexchange", "okcoin", "gatecoin", "coinmate", "bitso", "acx", "idex", "cryptobridge", 
@@ -31,7 +31,7 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"price of trtl", "price trtl", "price of turtle", "turtle price", "price turtle", "price of rtrl", "coin price", "price of coin", "price coin", "2 sats",
 				"2 sat", "3 sat", "3 sats", "4 sat", "4 sats", "2sat", "3sat", "4sat", "5sat", "5 sat", "6sat", "6 sat", "7sat", "7 sat", "8sat", "8 sat",
 				"9sat", "9 sat", "price of the coin", "price of the trtl", "price of the turtle", "pricce for the coin", "price for the trtl", "price for the turtle",
-				"price for coin", "price for trtl", "price for turtle" ]
+				"price for coin", "price for trtl", "price for turtle", "gamble turtle", "gamble trtl", "gamble rtrl", "trtl gamble", "turtle gamble" ]
 
 # list of responses
 wordlist = ["Heyo, please move to the server linked in <#406652012713738251>, we don't like it here.", 
@@ -55,7 +55,7 @@ super = "WHEN WEB WALLET"
 manres = "Hey, we don't like market-related talk in here. Join the server linked in <#406652012713738251> to discuss about it."
 
 # tip me repsonse
-tip = "Hey, thanks for the thought!! If you tip me, it all goes to RainBorg. If you want to tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
+tip = "Hey, thanks for the thought! If you tip me, it all goes to RainBorg. If you want to tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
 
 @client.event 
 async def on_ready():
@@ -128,6 +128,10 @@ async def on_message(message):
 		return
 
 	if msg == "^tip":
+		if shouldPrint():
+			lastMessageTimes.append(time.time())
 			await client.send_message(message.channel, message.author.mention + " " + tip)
+		else:
+			print("Ignoring message, have responded too many times in timeframe")
 
 client.run("token")
