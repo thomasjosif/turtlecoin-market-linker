@@ -27,13 +27,13 @@ bannedWords = ["trade", "exchange", "tradeogre", "sell turtlecoin", "buy turtlec
 				"buy bitcion", "buy btiocin", "buy bitocin", "coin offering", "inital coin offering", "crypto investing", "crypto invensting", "crypto investments",
 				"investment", "investment", "investing", "invensting", "dividends", "dividens", "profit, dividends and gains", "profit dividens and gains",
 				"mark3t", "xchange", "m@rket", "m@rk3t", "initial coin offering", "exchnage", "mkt", "xchnage", "bitfenix", "ccex", "exchamge", "buy some", "but some",
-				"bynance", "turtle cost", "cost turtle", "cost of turtle"]
+				"bynance", "turtle cost", "cost turtle", "cost of turtle", "buy high sell low", "buy hi sell low", "sell high buy low", "sell hi buy low"]
 
 # list of responses
-wordlist = ["Heyo, please move to the server linked in #market-talk, we don't like it here.", 
-			"If you could move to the server linked in #market-talk, that'd be great! We don't enjoy that here.", 
-			"Please move this discussion to the server linked in #market-talk, we like to keep this server focused on support and development. Thank you! :t_smile:",
-			":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in #market-talk, we don't like that here. :rotating_light:"]
+wordlist = ["Heyo, please move to the server linked in #406652012713738251>, we don't like it here.", 
+			"If you could move to the server linked in #406652012713738251>, that'd be great! We don't enjoy that here.", 
+			"Please move this discussion to the server linked in #406652012713738251>, we like to keep this server focused on support and development. Thank you! :t_smile:",
+			":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in #406652012713738251>, we don't like that here. :rotating_light:"]
 
 #help reply
 help = "Available commands - `^git` and `^todo`"
@@ -59,8 +59,8 @@ async def on_ready():
 	print("With me around, ain't gonna be no market talk!") 
 
 lastMessageTimes = []
-maxResponses = 6
-timeFrameWindow = 20
+maxResponses = 4
+timeFrameWindow = 15
 
 def shouldPrint():
 	currentTime = time.time()
@@ -78,10 +78,6 @@ def shouldPrint():
 async def on_message(message):
 	# convert it to lower
 	msg = message.content.lower()
-
-	#send only in general
-	if message.channel.id != "440496273762549762":
-		return
 
 	# check if the author is the **logged in** bot, in which case doesnt do anything
 	if(message.author.id == client.user.id):
@@ -133,5 +129,4 @@ async def on_message(message):
 			await client.send_message(message.channel, user.mention + " " + manres)
 	else:
 		return
-
 client.run("token")
