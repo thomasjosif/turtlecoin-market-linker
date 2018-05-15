@@ -6,32 +6,23 @@ import time
 client = discord.Client() 
 
 # list of words which triggers it
-bannedWords = ["trade", "exchanges", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "trde", "trae", "tradesat", 
-				"wen lambo", "wen moon", "trade-", "when moon", "when lambo", "fiat", "pr1ce", "usd", "euro", "inr", "binance", "altcoin", "sats", 
-				"to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sats down", "exhcnage", "pump and dump", "dump", 
-				"eur", "gbp", "ruble", "but turtlecoin", "but trtl", "moons", "hitbtc", "trtl be worth", "trtl worth", "exhcnag,e"
-				"airdrop", "shitcoin", "shitcion", "shitconi", "gewi", "gwei", "mine and sell", "down trend", "resistance line", "bearish", "bullish",
-				"to da moon", "pump and dump", "pump & dump", "pumped and dumped", "pumped & dumped", "pump n dump", "pumped n dumped" , "cmc", "coin market cap",
-				"ico ", "ipo ", "stop loss", "mkid", "tether", "trading", "trend line", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
-				"wtb", "wts", "Bitfinex", "Kraken", "Coinbase", "coinone", "Bitstamp", "Bithumb", "Bittrex", "Quoine", "Gemini", "bitFlyer", "BTC-e", "Poloniex", 
+bannedWords = ["exchanges", "tradeogre", "sell turtlecoin", "buy turtlecoin", "sell trtl", "buy trtl", "tradesatoshi", "tradesat", 
+				"trade-", "pr1ce", "binance", "sats", "to down", "ts down", "tradesatoshi down", "tradeogre down", "ogre down", "sats down", "exhcnage", 
+				"hitbtc", "trtl be worth", "trtl worth", "exhcnag,e", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
+				"Bitfinex", "Kraken", "Coinbase", "coinone", "Bitstamp", "Bithumb", "Bittrex", "Quoine", "Gemini", "bitFlyer", "BTC-e", "Poloniex", 
 				"exx ", "livecoin", "exmo", "korbit", "cex.io", "tidex", "vaultoro", "itbit", "cryptopia", "yobit", "lakebtc", "kucoin", "btc-alpha", 
 				"quadrigacx", "localbitcoins", "coinfloor", "bitx", "coinexchange", "okcoin", "gatecoin", "coinmate", "bitso", "acx", "idex", "cryptobridge", 
 				"btcc", "bitfex", "virwox", "bleutrade", "abucoins", "paymium",  "flowbtc", "gate.io", "bitkonan", "cryptox", "cryptonit", "go4cryptos", "c-cex",
 				"novaexchange", "coincoz", "btctrade", "vircurex", "allcoin", "coinsecure",  "indacoin", "bitmarket", "braziliex", "coinnest", "dsx", 
-				"localturtlecoin", "localmonero", "local bitcoin", "local bitcoins", "localbitcoin", "stocks.exchange", "wen lamb0", "when lamb0", "wen l@mbo", 
-				"when l@mbo", "wen l@mb0", "when l@mb0", "indacion", "indaocin", "satoshis", "ogre", "tr@de", "tr2de", "elliot wave", "when buy in", "mt. gox",
-				" mt. gox", "mtgox", "mt gox", "pesos", "pesps", "trtl sell", "tlt sell", "turtlecoin sell", "trtl buy", "trlt buy", "turtlecoin buy",
-				"1sat", "1 sat", "buy turtle", "sell turtle", "crypto exchange", "cryptocurrency exchange", "crypto currency exchange", "sellin", "buyin",
-				"selin", "pumpin", "dumpin", "sellwall", "buywall", "selwall", " ts", "s@t", "0 sat", "0sat", "0stas", "stas", "st@s", "btc volume", 
-				"btc volue", "btc volube", "wen buy in", "wen sell out", "wen but in", "when but in", "pr!ce", "binnance", "buy btc", "buy bct", "buy bticoin", 
-				"buy bitcion", "buy btiocin", "buy bitocin", "coin offering", "inital coin offering", "crypto investing", "crypto invensting", "crypto investments",
-				"investment", "investment", "investing", "invensting", "dividends", "dividens", "profit, dividends and gains", "profit dividens and gains",
-				"mark3t", "xchange", "m@rket", "m@rk3t", "initial coin offering", "exchnage", "mkt", "xchnage", "bitfenix", "ccex", "exchamge", "buy some", "but some",
-				"bynance", "turtle cost", "cost turtle", "cost of turtle", "buy high sell low", "buy hi sell low", "sell high buy low", "sell hi buy low", "trtl price", 
-				"price of trtl", "price trtl", "price of turtle", "turtle price", "price turtle", "price of rtrl", "coin price", "price of coin", "price coin", "2 sats",
-				"2 sat", "3 sat", "3 sats", "4 sat", "4 sats", "2sat", "3sat", "4sat", "5sat", "5 sat", "6sat", "6 sat", "7sat", "7 sat", "8sat", "8 sat",
-				"9sat", "9 sat", "price of the coin", "price of the trtl", "price of the turtle", "pricce for the coin", "price for the trtl", "price for the turtle",
-				"price for coin", "price for trtl", "price for turtle", "gamble turtle", "gamble trtl", "gamble rtrl", "trtl gamble", "turtle gamble" ]
+				"localturtlecoin", "localmonero", "local bitcoin", "local bitcoins", "localbitcoin", "stocks.exchange", "indacion", "indaocin", "satoshis", 
+				"trtl sell", "tlt sell", "turtlecoin sell", "trtl buy", "trlt buy", "turtlecoin buy", "1sat", "1 sat", "buy turtle", "sell turtle", "crypto exchange", 
+				"cryptocurrency exchange", "crypto currency exchange", "sellin", "buyin", "selin", "sellwall", "buywall", "selwall", " ts", "s@t", "0 sat", "0sat", "0stas", 
+				"stas", "st@s", "btc volume", "pr!ce", "binnance", "buy btc", "buy bct", "buy bticoin", "buy bitcion", "buy btiocin", "buy bitocin", "xchange", "exchnage", "xchnage", "bitfenix", "ccex", 
+				"exchamge", "bynance", "turtle cost", "cost turtle", "cost of turtle", "trtl price", "price of trtl", "price trtl", "price of turtle", "turtle price",
+				 "price turtle", "price of rtrl", "coin price", "price of coin", "price coin", "2 sats", "2 sat", "3 sat", "3 sats", "4 sat", "4 sats", "2sat", "3sat", 
+				 "4sat", "5sat", "5 sat", "6sat", "6 sat", "7sat", "7 sat", "8sat", "8 sat", "9sat", "9 sat", "price of the coin", "price of the trtl", 
+				 "price of the turtle", "pricce for the coin", "price for the trtl", "price for the turtle", "price for coin", "price for trtl", "price for turtle", 
+				 "gamble turtle", "gamble trtl", "gamble rtrl", "trtl gamble", "turtle gamble" ]
 
 # list of responses
 wordlist = ["Heyo, please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like it here.", 
