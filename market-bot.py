@@ -52,7 +52,7 @@ todo = "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
 super = "WHEN WEB WALLET"
 
 # manual warn's response
-manres = "Hey, we don't like market-related talk in here. Join the server linked in <#406652012713738251> to discuss about it."
+manres = "Hey, we don't like market-related talk in here. Join the server linked in <https://tinyurl.com/ybas4twh> to discuss about it."
 
 # tip me repsonse
 tip = "Hey, thanks for the thought! If you tip me, it all goes to RainBorg. If you want to tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
