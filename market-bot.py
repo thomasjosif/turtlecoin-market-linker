@@ -14,7 +14,7 @@ bannedWords = ["trade", "exchanges", "tradeogre", "sell turtlecoin", "buy turtle
 				"to da moon", "pump and dump", "pump & dump", "pumped and dumped", "pumped & dumped", "pump n dump", "pumped n dumped" , "cmc", "coin market cap",
 				"ico ", "ipo ", "stop loss", "mkid", "tether", "trading", "trend line", "buy wall", "sell wall", "buy order", "sell order", "buy trlt", "sell trlt", 
 				"wtb", "wts", "Bitfinex", "Kraken", "Coinbase", "coinone", "Bitstamp", "Bithumb", "Bittrex", "Quoine", "Gemini", "bitFlyer", "BTC-e", "Poloniex", 
-				"exx", "livecoin", "exmo", "korbit", "cex.io", "tidex", "vaultoro", "itbit", "cryptopia", "yobit", "lakebtc", "kucoin", "btc-alpha", 
+				"exx ", "livecoin", "exmo", "korbit", "cex.io", "tidex", "vaultoro", "itbit", "cryptopia", "yobit", "lakebtc", "kucoin", "btc-alpha", 
 				"quadrigacx", "localbitcoins", "coinfloor", "bitx", "coinexchange", "okcoin", "gatecoin", "coinmate", "bitso", "acx", "idex", "cryptobridge", 
 				"btcc", "bitfex", "virwox", "bleutrade", "abucoins", "paymium",  "flowbtc", "gate.io", "bitkonan", "cryptox", "cryptonit", "go4cryptos", "c-cex",
 				"novaexchange", "coincoz", "btctrade", "vircurex", "allcoin", "coinsecure",  "indacoin", "bitmarket", "braziliex", "coinnest", "dsx", 
@@ -34,10 +34,10 @@ bannedWords = ["trade", "exchanges", "tradeogre", "sell turtlecoin", "buy turtle
 				"price for coin", "price for trtl", "price for turtle", "gamble turtle", "gamble trtl", "gamble rtrl", "trtl gamble", "turtle gamble" ]
 
 # list of responses
-wordlist = ["Heyo, please move to the server linked in <#406652012713738251>, we don't like it here.", 
-			"If you could move to the server linked in <#406652012713738251>, that'd be great! We don't enjoy that here.", 
-			"Please move this discussion to the server linked in <#406652012713738251>, we like to keep this server focused on support and development. Thank you! <:t_smile:405478442599972874>",
-			":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in <#406652012713738251>, we don't like that here. :rotating_light:"]
+wordlist = ["Heyo, please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like it here.", 
+			"If you could move to the server linked in <https://tinyurl.com/ybas4twh>, that'd be great! We don't enjoy that here.", 
+			"Please move this discussion to the server linked in <https://tinyurl.com/ybas4twh>, we like to keep this server focused on support and development. Thank you! <:t_smile:405478442599972874>",
+			":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like that here. :rotating_light:"]
 
 #help reply
 help = "Available commands - `^git` and `^todo`"
@@ -52,7 +52,7 @@ todo = "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
 super = "WHEN WEB WALLET"
 
 # manual warn's response
-manres = "Hey, we don't like market-related talk in here. Join the server linked in <#406652012713738251> to discuss about it."
+manres = "Hey, we don't like market-related talk in here. Join the server linked in <https://tinyurl.com/ybas4twh> to discuss about it."
 
 # tip me repsonse
 tip = "Hey, thanks for the thought! If you tip me, it all goes to RainBorg. If you want to tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
