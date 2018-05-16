@@ -15,7 +15,8 @@ py market-bot.py
 * Scroll down to `Create a Bot User` and click that.
 * Click `Yes, do it!`
 * Copy your  bot token by clicking `click to reveal` in the `APP BOT USER`section.
-* Enter this token in the last line in `market-bot.py`, replacing `token`(keep the `"`).
+* Copy config.json.sample to config.json.
+* Replace "your token goes here" with this token, in config.json (keep the `"`).
 * **Don't reveal this token to anyone!**
 * Next you need to get the Channel ID you want the bot to run in.
 * In Discord, follow these steps-

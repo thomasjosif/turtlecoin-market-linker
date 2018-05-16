@@ -2,6 +2,7 @@ import discord
 import asyncio
 import random
 import time
+import json
 
 client = discord.Client() 
 
@@ -105,4 +106,5 @@ async def on_message(message):
     # Add current message time (if we actually sent a message)
     lastMessageTimes.append(time.time())
 
-client.run("token")
+config = json.load(open('config.json'))
+client.run(config['token'])
