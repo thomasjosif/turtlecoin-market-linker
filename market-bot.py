@@ -26,10 +26,10 @@ bannedWords = ["exchanges", "tradeogre", "sell turtlecoin", "buy turtlecoin", "s
                "gamble turtle", "gamble trtl", "gamble rtrl", "trtl gamble", "turtle gamble"]
 
 # list of responses
-wordlist = ["Heyo, please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like it here.", 
-            "If you could move to the server linked in <https://tinyurl.com/ybas4twh>, that'd be great! We don't enjoy that here.", 
+wordlist = ["Heyo, please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like market talk here.", 
+            "If you could move to the server linked in <https://tinyurl.com/ybas4twh>, that'd be great! We don't enjoy market talk here.", 
             "Please move this discussion to the server linked in <https://tinyurl.com/ybas4twh>, we like to keep this server focused on support and development. Thank you! <:t_smile:405478442599972874>",
-            ":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like that here. :rotating_light:"]
+            ":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like market talk here. :rotating_light:"]
 
 #help reply
 help = "Available commands - `^git` and `^todo`"
