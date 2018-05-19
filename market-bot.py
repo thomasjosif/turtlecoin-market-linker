@@ -13,7 +13,7 @@ bannedWords = ["exchanges", "tradeogre", "sell turtlecoin", "buy turtlecoin", "s
                "Bitfinex", "Kraken", "Coinbase", "coinone", "Bitstamp", "Bithumb", "Bittrex", "Quoine", "Gemini", "bitFlyer", "BTC-e", "Poloniex", 
                "exx ", "livecoin", "exmo", "korbit", "cex.io", "tidex", "vaultoro", "itbit", "cryptopia", "yobit", "lakebtc", "kucoin", "btc-alpha", 
                "quadrigacx", "localbitcoins", "coinfloor", "bitx", "coinexchange", "okcoin", "gatecoin", "coinmate", "bitso", "acx", "idex", "cryptobridge", 
-               "btcc", "bitfex", "virwox", "bleutrade", "abucoins", "paymium",  "flowbtc", "gate.io", "bitkonan", "cryptox", "cryptonit", "go4cryptos", "c-cex",
+               "btcc", "bitfex", "virwox", "bleutrade", "abucoins", "paymium",  "flowbtc", "gate.io", "bitkonan", "cryptox", "cryptonit ", "go4cryptos", "c-cex",
                "novaexchange", "coincoz", "btctrade", "vircurex", "allcoin", "coinsecure",  "indacoin", "bitmarket", "braziliex", "coinnest", "dsx", 
                "localturtlecoin", "localmonero", "local bitcoin", "local bitcoins", "localbitcoin", "stocks.exchange", "indacion", "indaocin", "satoshis", 
                "trtl sell", "tlt sell", "turtlecoin sell", "trtl buy", "trlt buy", "turtlecoin buy", "1sat", "1 sat", "buy turtle", "sell turtle", "crypto exchange", 
@@ -26,10 +26,10 @@ bannedWords = ["exchanges", "tradeogre", "sell turtlecoin", "buy turtlecoin", "s
                "gamble turtle", "gamble trtl", "gamble rtrl", "trtl gamble", "turtle gamble"]
 
 # list of responses
-wordlist = ["Heyo, please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like market talk here.", 
-            "If you could move to the server linked in <https://tinyurl.com/ybas4twh>, that'd be great! We don't enjoy market talk here.", 
-            "Please move this discussion to the server linked in <https://tinyurl.com/ybas4twh>, we like to keep this server focused on support and development. Thank you! <:t_smile:405478442599972874>",
-            ":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in <https://tinyurl.com/ybas4twh>, we don't like market talk here. :rotating_light:"]
+wordlist = ["Heyo, please move to this server, <https://tinyurl.com/ybas4twh>, we don't like market talk here.", 
+            "If you could move to this server, <https://tinyurl.com/ybas4twh>, that'd be great! We don't enjoy market talk here.", 
+            "Please move this discussion here, <https://tinyurl.com/ybas4twh>, we like to keep this server focused on support and development. Thank you! <:t_smile:405478442599972874>",
+            ":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to this server, <https://tinyurl.com/ybas4twh>, we don't like market talk here. :rotating_light:"]
 
 #help reply
 help = "Available commands - `^git` and `^todo`"
@@ -47,7 +47,7 @@ super = "WHEN WEB WALLET"
 manres = "Hey, we don't like market-related talk in here. Join the server linked in <https://tinyurl.com/ybas4twh> to discuss about it."
 
 # tip me repsonse
-tip = "Hey, thanks for the thought! If you tip me, it all goes to RainBorg. If you want to tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
+tip = "Hey, thanks for the thought! If you tip me, it doesn't go nowhere. If you want to tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
 
 # Only owner has access to certain commands
 ownerID = "235707623985512451"
@@ -107,4 +107,5 @@ async def on_message(message):
     lastMessageTimes.append(time.time())
 
 config = json.load(open('config.json'))
+
 client.run(config['token'])
