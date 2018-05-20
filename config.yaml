@@ -33,7 +33,7 @@ config:
     # tip me repsonse
     tip: "Hey, thanks for the thought! If you tip me, it goes nowhere. Tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
     
-    token: "xxxxxxxxxxxxxxxxxxxxxx"
+    tokenfile: "./tokenfile"
     ownerID: "235707623985512451"
     maxResponses: 4
     timeFrameWindow: 15

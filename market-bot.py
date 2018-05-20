@@ -22,6 +22,7 @@ todo = config["todo"]
 super = config["super"]
 manres = config["manres"] 
 tip = config["tip"]
+token=open(config["tokenfile"]).read()
 
 #load banned words list file
 bannedWords = loadwordlist(config["bannedWordsfile"])
@@ -83,4 +84,4 @@ async def on_message(message):
     # Add current message time (if we actually sent a message)
     lastMessageTimes.append(time.time())
 
-client.run(config["token"])
+client.run(token)
