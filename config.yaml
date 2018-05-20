@@ -1,0 +1,40 @@
+config:
+    #Start-up banner
+    banner: "With me around, ain't gonna be no market talk!"
+    
+    # file containing list of words that trigger the alert
+    bannedWordsfile: "./bannedWords"
+
+    # list of responses
+    wordList:
+        - "Heyo please move to the server linked in #market-talk we don't like it here."
+        - "If you could move to the server linked in #market-talk that'd be great! We don't enjoy that here."
+        - "Please move this discussion to the server linked in #market-talk we like to keep this server focused on support and development. Thank you! :t_smile:"
+        - ":rotating_light: MARKET TALK DETECTED :rotating_light: Please move to the server linked in #market-talk we don't like that here. :rotating_light:"
+
+    #help reply
+    help: "Available commands - `^git` and `^todo`"
+
+    # github repo
+    git: "https://github.com/Sajo811/turtlecoin-market-linker"
+
+    # todo list
+    todo: "https://github.com/Sajo811/turtlecoin-market-linker/projects/1"
+
+    # supreme power
+    super: "WHEN WEB WALLET"
+
+    # no permission to run
+    perms: "Sorry you don't have the privileges to run this command. It's like you're SuperMan and this command is green kryptonite."
+
+    # manual warn's response
+    manres: "Hey we don't like market-related talk in here. Join the server linked in #market-talk to discuss about it."
+
+    # tip me repsonse
+    tip: "Hey, thanks for the thought! If you tip me, it goes nowhere. Tip my creator, tip `@Sajo8#2953`. Once again, thank you! <:t_smile:405478442599972874>"
+    
+    tokenfile: "./tokenfile"
+    ownerID: "235707623985512451"
+    maxResponses: 4
+    timeFrameWindow: 15
+
